@@ -1,0 +1,406 @@
+/* ================================
+   GLOBAL
+================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  background: #eef3f8;
+  color: #102a43;
+}
+
+button {
+  font-family: inherit;
+}
+
+
+/* ================================
+   MAIN APP
+================================ */
+
+.app {
+  min-height: 100vh;
+  background: #eef3f8;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.header {
+  background: linear-gradient(135deg, #0b1f33, #123b5d);
+  color: white;
+  padding: 32px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 750;
+  letter-spacing: -0.5px;
+}
+
+.header p {
+  margin: 8px 0 0;
+  font-size: 18px;
+  color: #c9d8e6;
+}
+
+.refresh-btn {
+  border: none;
+  background: #ffffff;
+  color: #0b1f33;
+  padding: 13px 22px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.refresh-btn:hover {
+  background: #dceaf5;
+  transform: translateY(-1px);
+}
+
+
+/* ================================
+   DASHBOARD
+================================ */
+
+.dashboard {
+  width: 100%;
+  padding: 38px 5%;
+}
+
+
+/* ================================
+   STAT CARDS
+================================ */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 16px;
+  padding: 28px 20px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(15, 45, 70, 0.08);
+  border: 1px solid #dce5ed;
+  transition: 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(15, 45, 70, 0.12);
+}
+
+.stat-icon {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.stat-number {
+  font-size: 38px;
+  font-weight: 750;
+  color: #0b4f7c;
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 16px;
+  color: #60758a;
+}
+
+
+/* ================================
+   CATEGORY SECTION
+================================ */
+
+.category-section {
+  margin-bottom: 32px;
+}
+
+.category-section h2 {
+  margin: 0 0 6px;
+  font-size: 22px;
+  color: #102a43;
+}
+
+.category-section p {
+  margin: 0 0 18px;
+  color: #6b7f91;
+}
+
+
+/* ================================
+   CATEGORY FILTERS
+================================ */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-btn {
+  border: 1px solid #cbd8e3;
+  background: #ffffff;
+  color: #24445e;
+  padding: 10px 17px;
+  border-radius: 999px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.filter-btn:hover {
+  background: #e5f0f8;
+  border-color: #78a8c9;
+}
+
+.filter-btn.active {
+  background: #0b4f7c;
+  border-color: #0b4f7c;
+  color: white;
+}
+
+
+/* ================================
+   INCIDENT GRID
+================================ */
+
+.incidents-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+
+/* ================================
+   INCIDENT CARD
+================================ */
+
+.incident-card {
+  background: #ffffff;
+  border: 1px solid #dce5ed;
+  border-radius: 18px;
+  padding: 26px;
+  box-shadow: 0 6px 20px rgba(15, 45, 70, 0.07);
+  transition: 0.2s ease;
+}
+
+.incident-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(15, 45, 70, 0.12);
+}
+
+
+/* ================================
+   INCIDENT HEADER
+================================ */
+
+.incident-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.incident-label {
+  color: #6a8094;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.confidence {
+  background: #e7f7ef;
+  color: #087443;
+  padding: 9px 13px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+
+/* ================================
+   INCIDENT CONTENT
+================================ */
+
+.incident-title {
+  margin: 0 0 14px;
+  font-size: 21px;
+  line-height: 1.4;
+  color: #102a43;
+}
+
+.incident-description {
+  margin: 0 0 20px;
+  color: #526b80;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+
+/* ================================
+   AI CLASSIFICATION
+================================ */
+
+.classification {
+  background: #f2f6fa;
+  border: 1px solid #e0e8ef;
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+  margin-top: 18px;
+}
+
+.classification-label {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #7890a3;
+  margin-bottom: 7px;
+}
+
+.classification-value {
+  font-size: 16px;
+  font-weight: 750;
+  color: #0b4f7c;
+}
+
+
+/* ================================
+   INCIDENT META
+================================ */
+
+.incident-meta {
+  margin-top: 18px;
+  color: #71879a;
+  font-size: 13px;
+}
+
+
+/* ================================
+   SOURCE LINK
+================================ */
+
+.source-link {
+  display: inline-block;
+  margin-top: 18px;
+  color: #0878c9;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.source-link:hover {
+  text-decoration: underline;
+}
+
+
+/* ================================
+   LOADING
+================================ */
+
+.loading {
+  text-align: center;
+  padding: 60px 20px;
+  color: #60758a;
+  font-size: 17px;
+}
+
+
+/* ================================
+   ERROR
+================================ */
+
+.error {
+  background: #fff5f5;
+  border: 1px solid #f2caca;
+  color: #a12b2b;
+  border-radius: 14px;
+  padding: 25px;
+  text-align: center;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+.footer {
+  text-align: center;
+  padding: 35px 20px;
+  color: #71879a;
+  font-size: 13px;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1000px) {
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .incidents-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media (max-width: 650px) {
+
+  .header {
+    padding: 25px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header h1 {
+    font-size: 27px;
+  }
+
+  .header p {
+    font-size: 15px;
+  }
+
+  .refresh-btn {
+    align-self: stretch;
+  }
+
+  .dashboard {
+    padding: 25px 18px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .incident-card {
+    padding: 20px;
+  }
+
+  .incident-top {
+    align-items: flex-start;
+  }
+}
