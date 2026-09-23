@@ -1,0 +1,21 @@
+services:
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: civic-backend
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: civic-frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    restart: unless-stopped

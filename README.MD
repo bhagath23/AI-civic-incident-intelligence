@@ -340,6 +340,36 @@ Predicted Humanitarian Category
 React Dashboard
 ```
 
+
+## 🐳 Docker Setup
+
+The entire application is containerized using Docker and Docker Compose.
+
+### Architecture
+
+```text
+                    ┌─────────────────────┐
+                    │     GDACS RSS       │
+                    │   Live Incidents    │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │    FastAPI Backend   │
+                    │      Port 8000       │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │     DistilBERT      │
+                    │  10-Class NLP Model │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │   React Frontend    │
+                    │      Port 5173       │
+                    └─────────────────────┘
 ---
 
 # 🎯 Project Objective
